@@ -4,7 +4,7 @@
     "description": "Um projeto em 3 linguagens distinas, C++, Haskell e Prolog o qual tem como objetivo auxiliar o aprendizado de logica de booleana.",
     "link": "https://github.com/this-rafael/E-Logico",
     "imageUrl": "https://octodex.github.com/images/mcefeeline.jpg"
-  }, 
+  },
   {
     "name": "Message Managment System",
     "description": "Um projeto com NodeJS, Golang e Rust que tem como objetivo mostra o uso de rabbitmq como eficiente ferramenta de mensageria. Simula o disparo de inumeras mensagens e o processamento delas.",
@@ -25,16 +25,20 @@
   },
   {
     "name": "UmoDB",
-    "description": "Um projeto Nestjs com o objetivo de ",
+    "description": "Um projeto Nestjs com o objetivo de mostrar uma app com multiplos microserviços, com uso de kafka, grcp e outros",
     "link": "https://github.com/this-rafael/E-Logico",
     "imageUrl": "https://octodex.github.com/images/mcefeeline.jpg"
   },
-
-
-  https://octodex.github.com/images/NUX_Octodex.gif
-
-  
-  
-  
-  
+  {
+    "name": "Performatic Pagination",
+    "description": "Uma biblioteca de paginação backend para NodeJS, com o objetivo de reduzir o tempo de resposta de requisições com muitos dados. Reduzindo em até 40% o tamanho do payload enviado",
+    "link": "https://github.com/this-rafael/sms-manager",
+    "imageUrl": "https://octodex.github.com/images/privateinvestocat.jpg"
+  },
+  {
+    "name": "Cleanarch",
+    "description": "Uma CLI para gerar codigo com clean arhitecture, com o objetivo de facilitar o desenvolvimento de projetos com essa arquitetura.",
+    "link": "https://github.com/this-rafael/cleanarch",
+    "imageUrl": "https://octodex.github.com/images/codercat.jpg"
+  }
 ]

@@ -1,7 +1,6 @@
-
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Menu } from "lucide-react";
 
 type NavLink = {
   label: string;
@@ -13,7 +12,7 @@ const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Artigos", href: "/artigos" },
   { label: "Projetos", href: "/projetos" },
-  { label: "Perfil", href: "/perfil" },
+
   { label: "Contato", href: "/contato" },
   { label: "Solicite um serviço", href: "/servicos", isButton: true },
 ];
@@ -27,19 +26,23 @@ export function Header() {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-portfolio-dark/90 backdrop-blur-lg shadow-lg' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-portfolio-dark/90 backdrop-blur-lg shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="font-bold text-xl tracking-tight hover:text-portfolio-accent transition-colors duration-300"
             >
               Rafael Pereira
@@ -53,9 +56,10 @@ export function Header() {
                 key={link.href}
                 to={link.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 
-                  ${link.isButton 
-                    ? "button-primary shadow-md" 
-                    : "hover:text-portfolio-accent"
+                  ${
+                    link.isButton
+                      ? "button-primary shadow-md"
+                      : "hover:text-portfolio-accent"
                   }`}
               >
                 {link.label}
@@ -83,9 +87,10 @@ export function Header() {
                   key={link.href}
                   to={link.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 
-                    ${link.isButton 
-                      ? "button-primary mt-2" 
-                      : "hover:text-portfolio-accent"
+                    ${
+                      link.isButton
+                        ? "button-primary mt-2"
+                        : "hover:text-portfolio-accent"
                     }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

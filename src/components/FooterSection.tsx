@@ -76,14 +76,7 @@ export default function FooterSection() {
                   Projetos
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/perfil"
-                  className="text-portfolio-light/70 hover:text-portfolio-accent transition-colors duration-300"
-                >
-                  Perfil
-                </Link>
-              </li>
+
               <li>
                 <Link
                   to="/contato"
