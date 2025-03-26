@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Design Partners: Strategy",
+    "description": "O padrão Strategy permite definir uma família de algoritmos, encapsulá-los em classes separadas e torná-los intercambiáveis em tempo de execução.",
+    "imageUrl": "/images/strategy.webp",
+    "labels": ["Design Patterns", "Arquitetura"],
+    "articleUrl": "/artigos/design-partners-strategy"
+  },
+  {
+    "id": 2,
+    "title": "Como evitar code smells",
+    "description": "Code smells são indicadores de problemas no código que, embora não quebrem sua funcionalidade, sugerem fragilidade, complexidade ou má estrutura que pode levar a dificuldades futuras...",
+    "imageUrl": "/images/code-smells.webp",
+    "labels": ["Clean Code", "Boas Práticas"],
+    "articleUrl": "/artigos/como-evitar-code-smells"
+  },
+  {
+    "id": 3,
+    "title": "Clean Architecture",
+    "description": "O objetivo é garantir que as regras de negócios estejam no centro do sistema, protegidos de mudanças nas camadas externas...",
+    "imageUrl": "/images/Cleanarch.webp",
+    "labels": ["Arquitetura", "Clean Code"],
+    "articleUrl": "/artigos/clean-architecture"
+  },
+  {
+    "id": 4,
+    "title": "Notação BIG O - O que é isso?",
+    "description": "A notação Big O é uma forma de medir a complexidade de algoritmos, permitindo comparar a eficiência de diferentes soluções.",
+    "imageUrl": "/images/BigONotation.webp",
+    "labels": ["Algoritmos", "Complexidade"],
+    "articleUrl": "/artigos/notacao-big-o"
+  },
+  {
+    "id": 5,
+    "title": "O que são os principios SOLID",
+    "description": "SOLID é um acrônimo para cinco princípios de design de software que tornam o código mais compreensível, flexível e sustentável.",
+    "imageUrl": "/images/SOLID.webp",
+    "labels": ["Boas Práticas", "Arquitetura"],
+    "articleUrl": "/artigos/principios-solid"
+  },
+  {
+    "id": 6,
+    "title": "Design Partners: Adapter",
+    "description": "O padrão Adapter conecta interfaces incompatíveis, permitindo que classes com diferentes formatos trabalhem juntas...",
+    "imageUrl": "/images/adapter.webp",
+    "labels": ["Design Patterns", "Arquitetura"],
+    "articleUrl": "/artigos/design-partners-adapter"
+  },
+  {
+    "id": 7,
+    "title": "Dicas de logica de programação",
+    "description": "A gente sabe: programar não é brincadeira, mas não é um bicho-papão, não. Se tu esta entrando na area agora, você dev...",
+    "imageUrl": "/images/logica-de-programacao.webp",
+    "labels": ["Algoritmos", "Iniciantes"],
+    "articleUrl": "/artigos/dicas-logica-programacao"
+  }
+]

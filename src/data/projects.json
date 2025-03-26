@@ -1,0 +1,40 @@
+[
+  {
+    "name": "E-Logico",
+    "description": "Um projeto em 3 linguagens distinas, C++, Haskell e Prolog o qual tem como objetivo auxiliar o aprendizado de logica de booleana.",
+    "link": "https://github.com/this-rafael/E-Logico",
+    "imageUrl": "https://octodex.github.com/images/mcefeeline.jpg"
+  }, 
+  {
+    "name": "Message Managment System",
+    "description": "Um projeto com NodeJS, Golang e Rust que tem como objetivo mostra o uso de rabbitmq como eficiente ferramenta de mensageria. Simula o disparo de inumeras mensagens e o processamento delas.",
+    "link": "https://github.com/this-rafael/sms-manager",
+    "imageUrl": "https://octodex.github.com/images/privateinvestocat.jpg"
+  },
+  {
+    "name": "Crud de Veiculos",
+    "description": "Um projeto fullstack para gerenciamento de veiculos, com Angular e Nestjs",
+    "link": "https://github.com/this-rafael/vehicle-crud",
+    "imageUrl": "https://octodex.github.com/images/codercat.jpg"
+  },
+  {
+    "name": "Golang Web Shopping ",
+    "description": "Um simples projeto de e-commerce, com o objetivo de mostrar o uso de golang como backend.",
+    "link": "https://github.com/this-rafael/WebShopping",
+    "imageUrl": "https://octodex.github.com/images/visionary.jpg"
+  },
+  {
+    "name": "UmoDB",
+    "description": "Um projeto Nestjs com o objetivo de ",
+    "link": "https://github.com/this-rafael/E-Logico",
+    "imageUrl": "https://octodex.github.com/images/mcefeeline.jpg"
+  },
+
+
+  https://octodex.github.com/images/NUX_Octodex.gif
+
+  
+  
+  
+  
+]
