@@ -1,6 +1,6 @@
+import FooterSection from "@/components/FooterSection";
 import { Github, Linkedin, Mail, MessageSquare } from "lucide-react";
-import { Link } from "react-router-dom";
-import FooterSection from "../components/FooterSection";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -158,19 +158,19 @@ export default function Contact() {
             <h2 className="text-2xl font-semibold mb-6">Ou volte para</h2>
             <div className="flex justify-center space-x-4">
               <Link
-                to="/"
+                href="/"
                 className="px-6 py-3 bg-portfolio-dark-secondary border border-white/10 rounded-lg hover:border-portfolio-accent/50 transition-all duration-300"
               >
                 Home
               </Link>
               <Link
-                to="/artigos"
+                href="/artigos"
                 className="px-6 py-3 bg-portfolio-dark-secondary border border-white/10 rounded-lg hover:border-portfolio-accent/50 transition-all duration-300"
               >
                 Artigos
               </Link>
               <Link
-                to="/projetos"
+                href="/projetos"
                 className="px-6 py-3 bg-portfolio-dark-secondary border border-white/10 rounded-lg hover:border-portfolio-accent/50 transition-all duration-300"
               >
                 Projetos

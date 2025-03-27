@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 export default function FooterSection() {
@@ -8,7 +8,7 @@ export default function FooterSection() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <Link
-              to="/"
+              href="/"
               className="text-2xl font-bold text-portfolio-accent mb-4 inline-block"
             >
               Rafael Pereira
@@ -54,7 +54,7 @@ export default function FooterSection() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/"
+                  href="/"
                   className="text-portfolio-light/70 hover:text-portfolio-accent transition-colors duration-300"
                 >
                   Home
@@ -62,7 +62,7 @@ export default function FooterSection() {
               </li>
               <li>
                 <Link
-                  to="/artigos"
+                  href="/artigos"
                   className="text-portfolio-light/70 hover:text-portfolio-accent transition-colors duration-300"
                 >
                   Artigos
@@ -70,7 +70,7 @@ export default function FooterSection() {
               </li>
               <li>
                 <Link
-                  to="/projetos"
+                  href="/projetos"
                   className="text-portfolio-light/70 hover:text-portfolio-accent transition-colors duration-300"
                 >
                   Projetos
@@ -79,7 +79,7 @@ export default function FooterSection() {
 
               <li>
                 <Link
-                  to="/contato"
+                  href="/contato"
                   className="text-portfolio-light/70 hover:text-portfolio-accent transition-colors duration-300"
                 >
                   Contato
@@ -93,7 +93,7 @@ export default function FooterSection() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/servicos"
+                  href="/servicos"
                   className="text-portfolio-light/70 hover:text-portfolio-accent transition-colors duration-300"
                 >
                   Consultoria
@@ -101,7 +101,7 @@ export default function FooterSection() {
               </li>
               <li>
                 <Link
-                  to="/servicos"
+                  href="/servicos"
                   className="text-portfolio-light/70 hover:text-portfolio-accent transition-colors duration-300"
                 >
                   Desenvolvimento
@@ -109,7 +109,7 @@ export default function FooterSection() {
               </li>
               <li>
                 <Link
-                  to="/servicos"
+                  href="/servicos"
                   className="text-portfolio-light/70 hover:text-portfolio-accent transition-colors duration-300"
                 >
                   Arquitetura de Sistemas
@@ -117,7 +117,7 @@ export default function FooterSection() {
               </li>
               <li>
                 <Link
-                  to="/servicos"
+                  href="/servicos"
                   className="text-portfolio-light/70 hover:text-portfolio-accent transition-colors duration-300"
                 >
                   Cloud AWS

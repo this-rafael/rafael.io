@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Send } from "lucide-react";
-
+import { Header } from "@/components/Header";
 import {
   Form,
   FormControl,
@@ -12,19 +13,18 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../components/ui/form";
-import { Input } from "../components/ui/input";
-import { Button } from "../components/ui/button";
+} from "@/components/ui/form";
+import FooterSection from "@/components/FooterSection";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
-  SelectContent,
-  SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../components/ui/select";
-import { Textarea } from "../components/ui/textarea";
-import FooterSection from "../components/FooterSection";
-import Header from "../components/Header";
+  SelectContent,
+  SelectItem,
+} from "@radix-ui/react-select";
+import { Button } from "@/components/ui/button";
 
 const formSchema = z.object({
   name: z.string().min(3, {
@@ -71,7 +71,7 @@ ${values.deadline ? `*Prazo desejado*: ${values.deadline}` : ""}
 ${values.budget ? `*Orçamento estimado*: ${values.budget}` : ""}`;
 
     // Número do WhatsApp - substitua pelo seu número
-    const phoneNumber = "5531999999999"; // Substitua pelo seu número com DDD
+    const phoneNumber = "5583981188111"; // Substitua pelo seu número com DDD
 
     // Codificar a mensagem para URL
     const encodedMessage = encodeURIComponent(message);

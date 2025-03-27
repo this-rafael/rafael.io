@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import SkillsCarousel from "../components/SkillsCarousel";
@@ -7,24 +7,14 @@ import MiniArticleCard from "../components/MiniArticleCard";
 import ProfessionalSummary from "../components/ProfessionalSummary";
 import PersonalSummary from "../components/PersonalSummary";
 import FooterSection from "../components/FooterSection";
+import { buildHardSkill } from "@/lib/skillsHelper";
 
-function buildHardSkill(
-  id: number,
-  title: string,
-  imageUrl: string,
-  themeAccentColor: string,
-  label: string
-) {
-  return { id, title, imageUrl, themeAccentColor, label };
-}
+export const metadata: Metadata = {
+  title: "Rafael - Desenvolvedor Fullstack",
+  description: "Portfolio e blog de Rafael - Desenvolvedor Fullstack",
+};
 
-export default function Index() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
+export default function Home() {
   const hardSkills = [
     buildHardSkill(1, "NodeJS", "/images/nodejs.png", "#68A063", "Backend"),
     buildHardSkill(2, "NestJS", "/images/nestjs.png", "#E0234E", "Backend"),
@@ -51,11 +41,7 @@ export default function Index() {
   ];
 
   return (
-    <div
-      className={`min-h-screen flex flex-col ${
-        isLoaded ? "animate-fade-in" : "opacity-0"
-      }`}
-    >
+    <div className="min-h-screen flex flex-col animate-fade-in">
       <Header />
 
       <main className="flex-grow">

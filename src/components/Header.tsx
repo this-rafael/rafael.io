@@ -1,5 +1,6 @@
+"use client";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Menu } from "lucide-react";
 
 type NavLink = {
@@ -42,7 +43,7 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link
-              to="/"
+              href="/"
               className="font-bold text-xl tracking-tight hover:text-portfolio-accent transition-colors duration-300"
             >
               Rafael Pereira
@@ -54,7 +55,7 @@ export function Header() {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                to={link.href}
+                href={link.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 
                   ${
                     link.isButton
@@ -85,7 +86,7 @@ export function Header() {
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
-                  to={link.href}
+                  href={link.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 
                     ${
                       link.isButton

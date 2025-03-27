@@ -1,7 +1,6 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import Header from "../components/Header";
-import ArticleCard from "../components/ArticleCard";
-import FooterSection from "../components/FooterSection";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,7 +11,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import articles from "../data/articles.json";
+import articles from "../../data/articles.json";
+import Header from "@/components/Header";
+import ArticleCard from "@/components/ArticleCard";
+import FooterSection from "@/components/FooterSection";
 const getAllTags = () => {
   const tagsSet = new Set<string>();
   articles.forEach((article) => {
@@ -23,7 +25,7 @@ const getAllTags = () => {
 
 export default function Artigos() {
   const [searchText, setSearchText] = useState("");
-  const [selectedTag, setSelectedTag] = useState("all"); // Changed to "all" instead of ""
+  const [selectedTag, setSelectedTag] = useState("all");
   const [filteredArticles, setFilteredArticles] = useState(articles);
   const [isLoaded, setIsLoaded] = useState(false);
   const allTags = getAllTags();

@@ -1,3 +1,4 @@
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -23,10 +24,10 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
 
   const handleNext = () => {
     if (isAnimating) return;
-    
+
     setIsAnimating(true);
     setCurrentSlide((prev) => (prev + 1) % skills.length);
-    
+
     setTimeout(() => {
       setIsAnimating(false);
     }, 500);
@@ -34,10 +35,10 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
 
   const handlePrev = () => {
     if (isAnimating) return;
-    
+
     setIsAnimating(true);
     setCurrentSlide((prev) => (prev - 1 + skills.length) % skills.length);
-    
+
     setTimeout(() => {
       setIsAnimating(false);
     }, 500);
@@ -54,10 +55,10 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isSwipe = Math.abs(distance) > 50;
-    
+
     if (isSwipe) {
       if (distance > 0) {
         handleNext();
@@ -65,7 +66,7 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
         handlePrev();
       }
     }
-    
+
     setTouchStart(null);
     setTouchEnd(null);
   };
@@ -81,7 +82,7 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
         clearInterval(autoplayTimerRef.current);
       }
     };
-  }, [skills.length]);
+  }, [skills.length, handleNext]);
 
   // Pause autoplay on hover
   const pauseAutoplay = () => {
@@ -104,13 +105,12 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
   const currentSkill = skills[currentSlide];
 
   return (
-    <div 
-      id="skills"
-      className="w-full py-16"
-    >
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Principais habilidades</h2>
-      
-      <div 
+    <div id="skills" className="w-full py-16">
+      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+        Principais habilidades
+      </h2>
+
+      <div
         className="card max-w-3xl mx-auto relative overflow-hidden"
         onMouseEnter={pauseAutoplay}
         onMouseLeave={resumeAutoplay}
@@ -119,43 +119,55 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
         onTouchEnd={handleTouchEnd}
       >
         <div className="flex items-center min-h-[20rem] p-4 md:p-8">
-          <div 
-            className={`grid grid-cols-1 md:grid-cols-2 gap-6 w-full transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 gap-6 w-full transition-opacity duration-500 ${
+              isAnimating ? "opacity-0" : "opacity-100"
+            }`}
           >
             <div className="flex flex-col justify-center">
-              <h3 className="text-2xl md:text-3xl font-medium mb-4">{currentSkill.title}</h3>
-              <span 
+              <h3 className="text-2xl md:text-3xl font-medium mb-4">
+                {currentSkill.title}
+              </h3>
+              <span
                 className="inline-block px-3 py-1 text-xs rounded-full text-white w-fit mb-4"
                 style={{ backgroundColor: currentSkill.themeAccentColor }}
               >
                 {currentSkill.label}
               </span>
               <p className="text-portfolio-light/70">
-                {currentSkill.label === "Backend" && "Desenvolvimento de APIs, serviços e arquitetura de sistemas de backend."}
-                {currentSkill.label === "Frontend" && "Criação de interfaces de usuário responsivas e interativas."}
-                {currentSkill.label === "Fullstack" && "Desenvolvimento completo de aplicações web, do backend ao frontend."}
-                {currentSkill.label === "Database" && "Modelagem, otimização e administração de bancos de dados."}
-                {currentSkill.label === "Architecture" && "Design de arquitetura de software escalável e sustentável."}
+                {currentSkill.label === "Backend" &&
+                  "Desenvolvimento de APIs, serviços e arquitetura de sistemas de backend."}
+                {currentSkill.label === "Frontend" &&
+                  "Criação de interfaces de usuário responsivas e interativas."}
+                {currentSkill.label === "Fullstack" &&
+                  "Desenvolvimento completo de aplicações web, do backend ao frontend."}
+                {currentSkill.label === "Database" &&
+                  "Modelagem, otimização e administração de bancos de dados."}
+                {currentSkill.label === "Architecture" &&
+                  "Design de arquitetura de software escalável e sustentável."}
               </p>
             </div>
-            
+
             <div className="flex items-center justify-center relative">
               <div className="w-48 h-48 relative flex items-center justify-center">
-                <img 
-                  src={currentSkill.imageUrl} 
+                <img
+                  src={currentSkill.imageUrl}
                   alt={currentSkill.title}
                   className="object-contain max-w-full max-h-full"
                 />
-                
-                <div 
+
+                <div
                   className="absolute inset-0 rounded-full opacity-20"
-                  style={{ backgroundColor: currentSkill.themeAccentColor, filter: "blur(30px)" }}
+                  style={{
+                    backgroundColor: currentSkill.themeAccentColor,
+                    filter: "blur(30px)",
+                  }}
                 />
               </div>
             </div>
           </div>
         </div>
-        
+
         {/* Navigation buttons */}
         <button
           onClick={handlePrev}
@@ -165,7 +177,7 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
         >
           <ChevronLeft size={18} />
         </button>
-        
+
         <button
           onClick={handleNext}
           className="absolute right-3 top-1/2 -translate-y-1/2 bg-portfolio-dark/50 hover:bg-portfolio-dark/80 
@@ -174,7 +186,7 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
         >
           <ChevronRight size={18} />
         </button>
-        
+
         {/* Pagination dots */}
         <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
           {skills.map((_, index) => (
@@ -182,7 +194,9 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-portfolio-accent w-4' : 'bg-white/40'
+                index === currentSlide
+                  ? "bg-portfolio-accent w-4"
+                  : "bg-white/40"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

@@ -5,7 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 
-import projects from "../data/projects.json";
+import projects from "../../data/projects.json";
 
 const Projects: NextPage = () => {
   return (
