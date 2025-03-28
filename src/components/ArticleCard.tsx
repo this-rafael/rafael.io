@@ -1,6 +1,8 @@
 "use client";
+
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 interface ArticleCardProps {
   title: string;
@@ -18,7 +20,6 @@ export default function ArticleCard({
   imageUrl,
   labels,
   articleUrl,
-  variant = "dark",
   size = "medium",
 }: ArticleCardProps) {
   const [isHovered, setIsHovered] = useState(false);
@@ -37,7 +38,8 @@ export default function ArticleCard({
     >
       {/* Image */}
       <div className="relative h-48 w-full overflow-hidden">
-        <img
+        <Image
+          fill
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

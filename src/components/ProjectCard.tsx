@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 interface ProjectCardProps {
@@ -28,7 +29,7 @@ export default function ProjectCard({
     >
       <div className="bg-portfolio-dark border border-white/10 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-portfolio-accent/20 hover:-translate-y-1 h-full">
         <div className="relative h-48 w-full overflow-hidden">
-          <img
+          <Image
             src={imageUrl}
             alt={name}
             className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"

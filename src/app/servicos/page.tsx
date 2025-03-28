@@ -17,14 +17,15 @@ import {
 import FooterSection from "@/components/FooterSection";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+
+import { Button } from "@/components/ui/button";
 import {
   Select,
-  SelectTrigger,
-  SelectValue,
   SelectContent,
   SelectItem,
-} from "@radix-ui/react-select";
-import { Button } from "@/components/ui/button";
+  SelectTrigger,
+  SelectValue,
+} from "../../components/ui/select";
 
 const formSchema = z.object({
   name: z.string().min(3, {
@@ -130,7 +131,7 @@ ${values.budget ? `*Orçamento estimado*: ${values.budget}` : ""}`;
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="seu@email.com" {...field} />
+                            <Input placeholder="rafael.@email.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>

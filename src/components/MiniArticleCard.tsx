@@ -1,5 +1,5 @@
-
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 interface MiniArticleCardProps {
   title: string;
@@ -16,13 +16,13 @@ export default function MiniArticleCard({
   imageUrl,
   labels,
   articleUrl,
-  variant = "light"
 }: MiniArticleCardProps) {
   return (
     <div className="card group flex overflow-hidden h-40">
       {/* Image */}
       <div className="relative w-1/3 overflow-hidden">
-        <img
+        <Image
+          fill
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -49,13 +49,16 @@ export default function MiniArticleCard({
               </span>
             ))}
           </div>
-          
+
           <a
             href={articleUrl}
             className="inline-flex items-center text-xs font-medium text-portfolio-accent hover:underline mt-1"
           >
             Ler artigo
-            <ArrowRight size={12} className="ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight
+              size={12}
+              className="ml-1 transition-transform duration-300 group-hover:translate-x-1"
+            />
           </a>
         </div>
       </div>

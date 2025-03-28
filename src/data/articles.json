@@ -5,7 +5,7 @@
     "description": "O padrão Strategy permite definir uma família de algoritmos, encapsulá-los em classes separadas e torná-los intercambiáveis em tempo de execução.",
     "imageUrl": "/images/strategy.webp",
     "labels": ["Design Patterns", "Arquitetura"],
-    "articleUrl": "/artigos/design-partners-strategy"
+    "articleUrl": "https://www.linkedin.com/pulse/aumente-funcionalidade-do-seu-sistema-sem-se-com-padr%C3%A3o-s-pereira/"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Code smells são indicadores de problemas no código que, embora não quebrem sua funcionalidade, sugerem fragilidade, complexidade ou má estrutura que pode levar a dificuldades futuras...",
     "imageUrl": "/images/code-smells.webp",
     "labels": ["Clean Code", "Boas Práticas"],
-    "articleUrl": "/artigos/como-evitar-code-smells"
+    "articleUrl": "https://www.linkedin.com/posts/activity-7283471397262163969-SrSN/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADL-pdIB--bOuhCILRyHVdqpNJhTSvxwe5Y"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "O objetivo é garantir que as regras de negócios estejam no centro do sistema, protegidos de mudanças nas camadas externas...",
     "imageUrl": "/images/Cleanarch.webp",
     "labels": ["Arquitetura", "Clean Code"],
-    "articleUrl": "/artigos/clean-architecture"
+    "articleUrl": "https://www.linkedin.com/posts/activity-7041857205213536258-xQkS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADL-pdIB--bOuhCILRyHVdqpNJhTSvxwe5Y"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "A notação Big O é uma forma de medir a complexidade de algoritmos, permitindo comparar a eficiência de diferentes soluções.",
     "imageUrl": "/images/BigONotation.webp",
     "labels": ["Algoritmos", "Complexidade"],
-    "articleUrl": "/artigos/notacao-big-o"
+    "articleUrl": "https://www.linkedin.com/posts/activity-7119748798486052868-WPr0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADL-pdIB--bOuhCILRyHVdqpNJhTSvxwe5Y"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "SOLID é um acrônimo para cinco princípios de design de software que tornam o código mais compreensível, flexível e sustentável.",
     "imageUrl": "/images/SOLID.webp",
     "labels": ["Boas Práticas", "Arquitetura"],
-    "articleUrl": "/artigos/principios-solid"
+    "articleUrl": "https://www.linkedin.com/posts/activity-6933898254942134272-eFRm?utm_source=share&utm_medium=member_desktop&rcm=ACoAADL-pdIB--bOuhCILRyHVdqpNJhTSvxwe5Y"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "O padrão Adapter conecta interfaces incompatíveis, permitindo que classes com diferentes formatos trabalhem juntas...",
     "imageUrl": "/images/adapter.webp",
     "labels": ["Design Patterns", "Arquitetura"],
-    "articleUrl": "/artigos/design-partners-adapter"
+    "articleUrl": "https://www.linkedin.com/pulse/pare-de-ser-ref%C3%A9m-das-depend%C3%AAncias-diga-bem-vindo-ao-design-rafael/"
   },
   {
     "id": 7,
@@ -53,6 +53,6 @@
     "description": "A gente sabe: programar não é brincadeira, mas não é um bicho-papão, não. Se tu esta entrando na area agora, você dev...",
     "imageUrl": "/images/logica-de-programacao.webp",
     "labels": ["Algoritmos", "Iniciantes"],
-    "articleUrl": "/artigos/dicas-logica-programacao"
+    "articleUrl": "https://www.linkedin.com/posts/activity-7283471397262163969-SrSN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADL-pdIB--bOuhCILRyHVdqpNJhTSvxwe5Y"
   }
 ]

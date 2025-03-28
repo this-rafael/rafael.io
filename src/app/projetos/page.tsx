@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Image from "next/image";
 import Head from "next/head";
 
 import ProjectCard from "@/components/ProjectCard";
@@ -29,9 +30,10 @@ const Projects: NextPage = () => {
 
             <div className="card p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/3 relative h-60 w-full">
-                <img
+                <Image
                   src="https://octodex.github.com/images/NUX_Octodex.gif"
                   alt="GitHub Octodex"
+                  fill
                   className="object-contain"
                 />
               </div>

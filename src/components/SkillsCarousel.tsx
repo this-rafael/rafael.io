@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Skill {
@@ -22,27 +23,31 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const autoplayTimerRef = useRef<number | null>(null);
 
-  const handleNext = () => {
-    if (isAnimating) return;
+  const handleNext = useMemo(() => {
+    return () => {
+      if (isAnimating) return;
 
-    setIsAnimating(true);
-    setCurrentSlide((prev) => (prev + 1) % skills.length);
+      setIsAnimating(true);
+      setCurrentSlide((prev) => (prev + 1) % skills.length);
 
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 500);
-  };
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 500);
+    };
+  }, [isAnimating, skills.length]);
 
-  const handlePrev = () => {
-    if (isAnimating) return;
+  const handlePrev = useMemo(() => {
+    return () => {
+      if (isAnimating) return;
 
-    setIsAnimating(true);
-    setCurrentSlide((prev) => (prev - 1 + skills.length) % skills.length);
+      setIsAnimating(true);
+      setCurrentSlide((prev) => (prev - 1 + skills.length) % skills.length);
 
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 500);
-  };
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 500);
+    };
+  }, [isAnimating, skills.length]);
 
   // Handle touch events for mobile swipe
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -54,7 +59,7 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
   };
 
   const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
+    if (touchStart === null || touchEnd === null) return;
 
     const distance = touchStart - touchEnd;
     const isSwipe = Math.abs(distance) > 50;
@@ -82,7 +87,7 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
         clearInterval(autoplayTimerRef.current);
       }
     };
-  }, [skills.length, handleNext]);
+  }, [handleNext]);
 
   // Pause autoplay on hover
   const pauseAutoplay = () => {
@@ -149,18 +154,34 @@ export default function SkillsCarousel({ skills }: SkillsCarouselProps) {
             </div>
 
             <div className="flex items-center justify-center relative">
-              <div className="w-48 h-48 relative flex items-center justify-center">
-                <img
-                  src={currentSkill.imageUrl}
-                  alt={currentSkill.title}
-                  className="object-contain max-w-full max-h-full"
-                />
+              <div className="w-64 h-64 relative flex items-center justify-center">
+                <div
+                  className="w-52 h-52 relative flex items-center justify-center"
+                  style={{
+                    backgroundColor: "white",
+                    borderRadius: "50%",
+                  }}
+                >
+                  <Image
+                    src={currentSkill.imageUrl}
+                    alt={currentSkill.title}
+                    fill
+                    className="object-contain max-w-full max-h-full"
+                  />
+                  <div
+                    className="absolute inset-0 rounded-full opacity-15"
+                    style={{
+                      backgroundColor: currentSkill.themeAccentColor,
+                      filter: "blur(100px)",
+                    }}
+                  />
+                </div>
 
                 <div
-                  className="absolute inset-0 rounded-full opacity-20"
+                  className="absolute inset-0 rounded-full opacity-25"
                   style={{
                     backgroundColor: currentSkill.themeAccentColor,
-                    filter: "blur(30px)",
+                    filter: "blur(10px)",
                   }}
                 />
               </div>
