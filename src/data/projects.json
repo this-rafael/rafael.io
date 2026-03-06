@@ -1,0 +1,118 @@
+﻿[
+  {
+    "name": "MemCP",
+    "description": "Servidor MCP para gerenciamento de memória em IA. Processamento paralelo com Worker Threads, busca full-text, monitoramento multi-path e AI-powered Memory Organizer. Instalação global via npm.",
+    "tech": [
+      "Node.js",
+      "TypeScript",
+      "Worker Threads",
+      "MCP Protocol"
+    ],
+    "link": "https://github.com/this-rafael/memcp",
+    "imageUrl": "https://octodex.github.com/images/mcefeeline.jpg"
+  },
+  {
+    "name": "Message Management System",
+    "description": "Gateway de SMS de alta performance multi-linguagem. Processamento assíncrono com RabbitMQ disparando e processando milhares de mensagens simultâneas em 3 runtimes distintos.",
+    "tech": [
+      "Node.js",
+      "Golang",
+      "Rust",
+      "RabbitMQ"
+    ],
+    "link": "https://github.com/this-rafael/sms-manager",
+    "imageUrl": "https://octodex.github.com/images/privateinvestocat.jpg"
+  },
+  {
+    "name": "UmoDB",
+    "description": "Catálogo de filmes com arquitetura distribuída. Clone do IMDB em microsserviços com streaming de eventos via Kafka e comunicação inter-serviços via gRPC.",
+    "tech": [
+      "NestJS",
+      "PostgreSQL",
+      "Kafka",
+      "gRPC"
+    ],
+    "link": "https://github.com/this-rafael/umodb",
+    "imageUrl": "https://octodex.github.com/images/mcefeeline.jpg"
+  },
+  {
+    "name": "Vehicle Management System",
+    "description": "Sistema fullstack de gestão de frotas com rastreamento em tempo real. Backend em NestJS com PostgreSQL e frontend em Angular, aplicando Clean Architecture e DDD.",
+    "tech": [
+      "NestJS",
+      "Angular",
+      "PostgreSQL",
+      "Clean Architecture"
+    ],
+    "link": "https://github.com/this-rafael/Vehicle-Management-System",
+    "imageUrl": "https://octodex.github.com/images/codercat.jpg"
+  },
+  {
+    "name": "Performatic Pagination",
+    "description": "Biblioteca open-source de paginação otimizada para NestJS. Reduz até 40% o payload de respostas paginadas em APIs com alto volume de dados.",
+    "tech": [
+      "NestJS",
+      "TypeScript",
+      "npm"
+    ],
+    "link": "https://github.com/this-rafael/performatic_pagination_nestjs",
+    "imageUrl": "https://octodex.github.com/images/privateinvestocat.jpg"
+  },
+  {
+    "name": "E-Logico",
+    "description": "Projeto acadêmico em 3 paradigmas. Implementação de lógica booleana em C++ (imperativo), Haskell (funcional) e Prolog (lógico), demonstrando versatilidade em paradigmas de programação.",
+    "tech": [
+      "C++",
+      "Haskell",
+      "Prolog"
+    ],
+    "link": "https://github.com/this-rafael/E-Logico",
+    "imageUrl": "https://octodex.github.com/images/visionary.jpg"
+  },
+  {
+    "name": "Cleanarch CLI",
+    "description": "CLI para scaffolding com Clean Architecture. Automatiza a criação de camadas, entidades, use cases e adapters seguindo os princípios de Robert C. Martin.",
+    "tech": [
+      "TypeScript",
+      "CLI",
+      "Clean Architecture"
+    ],
+    "link": "https://github.com/this-rafael/cleanarch",
+    "imageUrl": "https://octodex.github.com/images/codercat.jpg"
+  },
+  {
+    "name": "Landing Page — Eletricista",
+    "description": "Landing page comercial para captação de leads via WhatsApp. React + Vite com CTA de mensagem pré-preenchida, cobertura de testes com Vitest e SEO otimizado.",
+    "tech": [
+      "React",
+      "Vite",
+      "Vitest",
+      "SEO"
+    ],
+    "link": "https://github.com/this-rafael/bras-lia-spark",
+    "imageUrl": "https://octodex.github.com/images/privateinvestocat.jpg"
+  },
+  {
+    "name": "Autosync Obsidian",
+    "description": "CLI Python de sincronização automática de vaults Obsidian via Git. Executa no logon/logoff/shutdown do Windows via Agendador de Tarefas, com lock por repositório e logs diários.",
+    "tech": [
+      "Python",
+      "Git",
+      "Windows Task Scheduler"
+    ],
+    "link": "https://github.com/this-rafael/autosync-obsidian",
+    "imageUrl": "https://octodex.github.com/images/codercat.jpg"
+  },
+  {
+    "name": "Country Info App",
+    "description": "Monorepo fullstack para exploração de dados geopolíticos. Backend NestJS (3 módulos independentes) com REST Countries API; frontend Next.js com roteamento dinâmico e visualização de dados com Recharts.",
+    "tech": [
+      "NestJS",
+      "Next.js",
+      "Recharts",
+      "Tailwind CSS"
+    ],
+    "link": "https://github.com/this-rafael/country-data-handler",
+    "imageUrl": "https://octodex.github.com/images/visionary.jpg"
+  }
+]

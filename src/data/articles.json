@@ -1,0 +1,74 @@
+﻿[
+    {
+        "id": 1,
+        "title": "Design Patterns: Strategy",
+        "description": "Cadeias de if/else crescem, ficam frágeis e viram pesadelo de manutenção. O padrão Strategy resolve isso encapsulando cada algoritmo em sua própria classe e tornando-os intercambiáveis em tempo de execução — sem tocar no código que os consome. Explorando a implementação em TypeScript com injeção de dependência no NestJS.",
+        "imageUrl": "/images/strategy.webp",
+        "labels": [
+            "Design Patterns",
+            "Arquitetura"
+        ],
+        "articleUrl": "/artigos/design-patterns-strategy",
+        "linkedInUrl": "https://www.linkedin.com/pulse/aumente-funcionalidade-do-seu-sistema-sem-se-com-padr%C3%A3o-s-pereira/"
+    },
+    {
+        "id": 2,
+        "title": "Como evitar Code Smells",
+        "description": "Code smells não quebram o sistema hoje — mas garantem que ele quebre amanhã. Neste artigo mapeio os principais cheiros: God Object, Feature Envy, Long Method e Primitive Obsession, mostrando com exemplos antes/depois em TypeScript quais refatorações aplicar em cada caso.",
+        "imageUrl": "/images/code-smells.webp",
+        "labels": [
+            "Clean Code",
+            "Boas Práticas"
+        ],
+        "articleUrl": "/artigos/como-evitar-code-smells",
+        "linkedInUrl": "https://www.linkedin.com/posts/activity-7283471397262163969-SrSN/?utm_source=share\u0026utm_medium=member_desktop\u0026rcm=ACoAADL-pdIB--bOuhCILRyHVdqpNJhTSvxwe5Y"
+    },
+    {
+        "id": 3,
+        "title": "Clean Architecture na prática",
+        "description": "A Regra de Dependência da Clean Architecture determina que o código-fonte só pode apontar para dentro — nunca para fora. Isso protege as regras de negócio de mudanças em frameworks, bancos de dados e UIs. Aqui mostro como aplicar Use Cases, Entities e Adapters em um projeto Node.js real.",
+        "imageUrl": "/images/Cleanarch.webp",
+        "labels": [
+            "Arquitetura",
+            "Clean Code"
+        ],
+        "articleUrl": "/artigos/clean-architecture-na-pratica",
+        "linkedInUrl": "https://www.linkedin.com/posts/activity-7041857205213536258-xQkS?utm_source=share\u0026utm_medium=member_desktop\u0026rcm=ACoAADL-pdIB--bOuhCILRyHVdqpNJhTSvxwe5Y"
+    },
+    {
+        "id": 4,
+        "title": "Notação Big O: analisando complexidade de algoritmos",
+        "description": "De O(1) a O(n²): entenda como medir o custo computacional de algoritmos de busca, ordenação e estruturas de dados. Com comparações visuais e exemplos práticos que mostram por que a escolha do algoritmo certo pode ser a diferença entre um sistema escalável e um que trava em produção.",
+        "imageUrl": "/images/BigONotation.webp",
+        "labels": [
+            "Algoritmos",
+            "Complexidade"
+        ],
+        "articleUrl": "/artigos/notacao-big-o",
+        "linkedInUrl": "https://www.linkedin.com/posts/activity-7119748798486052868-WPr0?utm_source=share\u0026utm_medium=member_desktop\u0026rcm=ACoAADL-pdIB--bOuhCILRyHVdqpNJhTSvxwe5Y"
+    },
+    {
+        "id": 5,
+        "title": "Os princípios SOLID explicados com código",
+        "description": "SRP, OCP, LSP, ISP e DIP — cinco princípios que todo dev conhece de nome, mas poucos aplicam de verdade. Neste artigo apresento violações reais de cada princípio e as refatorações correspondentes em TypeScript, mostrando como eles tornam sistemas extensíveis sem quebrar o que já funciona.",
+        "imageUrl": "/images/SOLID.webp",
+        "labels": [
+            "Boas Práticas",
+            "Arquitetura"
+        ],
+        "articleUrl": "/artigos/principios-solid",
+        "linkedInUrl": "https://www.linkedin.com/posts/activity-6933898254942134272-eFRm?utm_source=share\u0026utm_medium=member_desktop\u0026rcm=ACoAADL-pdIB--bOuhCILRyHVdqpNJhTSvxwe5Y"
+    },
+    {
+        "id": 6,
+        "title": "Design Patterns: Adapter",
+        "description": "Depender diretamente de SDKs, libs de terceiros e APIs externas é uma armadilha: quando a dependência muda, seu código inteiro sofre. O padrão Adapter cria um contrato próprio entre sua aplicação e o mundo externo, tornando a troca de qualquer dependência uma operação cirúrgica e segura.",
+        "imageUrl": "/images/adapter.webp",
+        "labels": [
+            "Design Patterns",
+            "Arquitetura"
+        ],
+        "articleUrl": "/artigos/design-patterns-adapter",
+        "linkedInUrl": "https://www.linkedin.com/pulse/pare-de-ser-ref%C3%A9m-das-depend%C3%AAncias-diga-bem-vindo-ao-design-rafael/"
+    }
+]

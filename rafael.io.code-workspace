@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "E:/Licitacoes/s12p/dynamic_style_guide"
+		},
+		{
+			"path": "E:/obsidian_novo/Pessoal/Entrevistas"
+		}
+	],
+	"settings": {
+		"chat.tools.terminal.autoApprove": {
+			".specify/scripts/bash/": true,
+			".specify/scripts/powershell/": true
+		},
+		"chat.mcp.discovery.enabled": {
+			"claude-desktop": true,
+			"cursor-global": true
+		}
+	}
+}

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Permitir acesso a todo o site para todos os crawlers
+# Se houver áreas que não devem ser indexadas, você poderia adicionar:
+# Disallow: /admin/
+# Disallow: /private/
+
+# Apontar para o arquivo de sitemap
+Sitemap: https://rafael.io/sitemap.xml

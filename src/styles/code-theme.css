@@ -1,0 +1,143 @@
+/*
+ * PRISM Code Theme — custom highlight.js theme
+ * Built on the site's design-system tokens.
+ *
+ *  Purple  #bf5af2  → keywords, modifiers
+ *  Blue    #0a84ff  → built-ins, attributes, properties
+ *  Teal    #40c8e0  → class names, types, interfaces
+ *  Green   #30d158  → function/method names, comments path
+ *  Gold    #ffd60a  → strings, template literals
+ *  Orange  #ff9f0a  → numbers, booleans, literals
+ *  Rose    #ff375f  → decorators, meta, RegExp
+ *  Muted   #5c5c7a  → comments, punctuation dim
+ *  Text    #dcdce8  → default token text
+ */
+
+/* ── Base ──────────────────────────────────────────────────── */
+.hljs {
+  color: #dcdce8;
+  background: transparent;
+}
+
+/* ── Comments ──────────────────────────────────────────────── */
+.hljs-comment,
+.hljs-quote {
+  color: #5c5c7a;
+  font-style: italic;
+}
+
+/* ── Keywords & modifiers ──────────────────────────────────── */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #bf5af2;
+  font-weight: 500;
+}
+
+/* ── Class names, types, interfaces ───────────────────────── */
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-type,
+.hljs-template-tag {
+  color: #40c8e0;
+}
+
+/* ── Function / method names ───────────────────────────────── */
+.hljs-title.function_,
+.hljs-function > .hljs-title {
+  color: #30d158;
+}
+
+/* ── Built-ins, stdlib, namespaces ─────────────────────────── */
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0a84ff;
+}
+
+/* ── Strings, template literals ───────────────────────────── */
+.hljs-string,
+.hljs-doctag,
+.hljs-formula {
+  color: #ffd60a;
+}
+
+/* ── Numbers, booleans, constants ──────────────────────────── */
+.hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet {
+  color: #ff9f0a;
+}
+
+/* ── Attributes / properties / params ─────────────────────── */
+.hljs-attr,
+.hljs-property,
+.hljs-variable.language_,
+.hljs-variable {
+  color: #0a84ff;
+}
+
+/* ── Decorators, meta, annotations ────────────────────────── */
+.hljs-meta,
+.hljs-meta .hljs-keyword {
+  color: #ff375f;
+}
+
+.hljs-meta .hljs-string {
+  color: #ffd60a;
+}
+
+/* ── Operators, selector attrs ─────────────────────────────── */
+.hljs-operator,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #bf5af2;
+}
+
+/* ── Params ────────────────────────────────────────────────── */
+.hljs-params {
+  color: #dcdce8;
+}
+
+/* ── Name (selector id / tag) ──────────────────────────────── */
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #40c8e0;
+}
+
+/* ── RegExp ────────────────────────────────────────────────── */
+.hljs-regexp {
+  color: #ff375f;
+}
+
+/* ── Links ─────────────────────────────────────────────────── */
+.hljs-link {
+  color: #0a84ff;
+  text-decoration: underline;
+}
+
+/* ── Diff ──────────────────────────────────────────────────── */
+.hljs-deletion {
+  color: #ff375f;
+}
+
+.hljs-addition {
+  color: #30d158;
+}
+
+/* ── Emphasis ──────────────────────────────────────────────── */
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/* ── Section / sub-heading ─────────────────────────────────── */
+.hljs-section {
+  color: #ffd60a;
+  font-weight: bold;
+}
