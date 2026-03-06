@@ -5,6 +5,8 @@ interface PostImageProps {
   alt?: string;
   /** Optional caption shown below the image */
   caption?: string;
+  /** Renders the image in portrait aspect ratio (3/4) instead of the default 16/9 */
+  portrait?: boolean;
 }
 
 /**
@@ -16,7 +18,12 @@ interface PostImageProps {
  *   chart-xxx.png  → rendered as-is (this component)
  *   img-xxx.png    → rendered as-is (this component)
  */
-export default function PostImage({ src, alt = "", caption }: PostImageProps) {
+export default function PostImage({
+  src,
+  alt = "",
+  caption,
+  portrait,
+}: PostImageProps) {
   if (!src) return null;
 
   return (
@@ -24,7 +31,7 @@ export default function PostImage({ src, alt = "", caption }: PostImageProps) {
       <div
         className="relative w-full overflow-hidden rounded-xl border border-white/10
           shadow-[0_0_32px_rgba(0,0,0,0.5)]"
-        style={{ aspectRatio: "16/9" }}
+        style={{ aspectRatio: portrait ? "3/4" : "16/9" }}
       >
         <Image
           src={src}
