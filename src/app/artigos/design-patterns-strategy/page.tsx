@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import StaticPostLayout from "@/components/posts/StaticPostLayout";
 import type { StaticPostMeta } from "@/components/posts/StaticPostLayout";
 import CodeBlock from "@/components/posts/CodeBlock";
@@ -55,8 +56,9 @@ export default function DesignPatternsStrategyPage() {
         <code>switch</code> ou cadeia de <code>if/else</code>.
       </p>
 
-      <CodeBlock><code className="language-typescript">
-        {`class DefaultCalculator {
+      <CodeBlock>
+        <code className="language-typescript">
+          {`class DefaultCalculator {
   public calculate(parameters: BinaryOperationParameters): Result {
     const { operator, firstOperand, secondOperand } = parameters;
     
@@ -78,7 +80,8 @@ export default function DesignPatternsStrategyPage() {
     }
   }
 }`}
-      </code></CodeBlock>
+        </code>
+      </CodeBlock>
 
       <p>
         E até aí tudo bem… Mas e quando a calculadora precisar suportar
@@ -130,8 +133,9 @@ export default function DesignPatternsStrategyPage() {
         números e retorne o resultado:
       </p>
 
-      <CodeBlock><code className="language-typescript">
-        {`interface BinaryOperationParameters {
+      <CodeBlock>
+        <code className="language-typescript">
+          {`interface BinaryOperationParameters {
   firstOperand: number;
   secondOperand: number;
   operator: string;
@@ -142,7 +146,8 @@ type Result = number;
 interface BinaryOperationStrategy {
   calculate(parameters: Pick<BinaryOperationParameters, 'firstOperand' | 'secondOperand'>): Result;
 }`}
-      </code></CodeBlock>
+        </code>
+      </CodeBlock>
 
       <h2>Implementando estratégias concretas</h2>
       <p>
@@ -153,8 +158,9 @@ interface BinaryOperationStrategy {
         <strong>Soma</strong> e da <strong>Divisão</strong>:
       </p>
 
-      <CodeBlock><code className="language-typescript">
-        {`class Sum implements BinaryOperationStrategy {
+      <CodeBlock>
+        <code className="language-typescript">
+          {`class Sum implements BinaryOperationStrategy {
   public calculate(parameters: Pick<BinaryOperationParameters, 'firstOperand' | 'secondOperand'>): Result {
     const { firstOperand, secondOperand } = parameters;
     return firstOperand + secondOperand;
@@ -170,7 +176,8 @@ class Division implements BinaryOperationStrategy {
     return firstOperand / secondOperand;
   }
 }`}
-      </code></CodeBlock>
+        </code>
+      </CodeBlock>
 
       {/* ─── O Context ─── */}
       <h2>O Context e a Factory</h2>
@@ -182,8 +189,9 @@ class Division implements BinaryOperationStrategy {
         operador solicitado.
       </p>
 
-      <CodeBlock><code className="language-typescript">
-        {`class ContextAnalyzer {
+      <CodeBlock>
+        <code className="language-typescript">
+          {`class ContextAnalyzer {
   public getInstance(operator: string): BinaryOperationStrategy {
     switch (operator) {
       case '*':
@@ -203,7 +211,8 @@ class Division implements BinaryOperationStrategy {
     }
   }
 }`}
-      </code></CodeBlock>
+        </code>
+      </CodeBlock>
 
       <p>
         O contexto é quem recebe a estratégia e a executa. Ele não precisa saber{" "}
@@ -213,8 +222,9 @@ class Division implements BinaryOperationStrategy {
         torna muito mais enxuta!
       </p>
 
-      <CodeBlock><code className="language-typescript">
-        {`class Calculator {
+      <CodeBlock>
+        <code className="language-typescript">
+          {`class Calculator {
   constructor(private readonly contextAnalyzer: ContextAnalyzer) {}
 
   /**
@@ -228,7 +238,8 @@ class Division implements BinaryOperationStrategy {
     return this.contextAnalyzer.getInstance(operator).calculate({ firstOperand, secondOperand });
   }
 }`}
-      </code></CodeBlock>
+        </code>
+      </CodeBlock>
 
       {/* ─── Benefícios e próximos passos ─── */}
       <h2>Por que usar o Strategy?</h2>
@@ -267,12 +278,14 @@ class Division implements BinaryOperationStrategy {
           <strong>Adapter</strong> — enquanto o Strategy define{" "}
           <em>variações de comportamento</em>, o Adapter isola{" "}
           <em>dependências externas</em> por trás de uma interface própria.{" "}
-          <a href="/artigos/design-patterns-adapter">Leia sobre o Adapter →</a>
+          <Link href="/artigos/design-patterns-adapter">
+            Leia sobre o Adapter →
+          </Link>
         </li>
         <li>
           <strong>SOLID (OCP)</strong> — o Strategy é uma das formas mais
           naturais de aplicar o Open/Closed Principle.{" "}
-          <a href="/artigos/principios-solid">Leia sobre SOLID →</a>
+          <Link href="/artigos/principios-solid">Leia sobre SOLID →</Link>
         </li>
       </ul>
     </StaticPostLayout>

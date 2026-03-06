@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import StaticPostLayout from "@/components/posts/StaticPostLayout";
 import type { StaticPostMeta } from "@/components/posts/StaticPostLayout";
 import CodeBlock from "@/components/posts/CodeBlock";
@@ -47,22 +48,22 @@ export default function PrincipiosSOLIDPage() {
       <p>
         Já ouviu falar em SOLID? São cinco princípios da programação orientada a
         objetos que facilitam o desenvolvimento de software, tornando-o fácil de
-        manter e estender. Mas conhecer a sigla é diferente de <em>aplicar de
-        verdade</em> — então vamos ao código.
+        manter e estender. Mas conhecer a sigla é diferente de{" "}
+        <em>aplicar de verdade</em> — então vamos ao código.
       </p>
 
       {/* ─── SRP ─── */}
       <h2>S — Single Responsibility Principle (SRP)</h2>
       <blockquote>
         <p>
-          &quot;Uma classe deve ter um, e somente um, motivo para mudar.&quot;
-          — Robert C. Martin
+          &quot;Uma classe deve ter um, e somente um, motivo para mudar.&quot; —
+          Robert C. Martin
         </p>
       </blockquote>
       <p>
-        O SRP diz que cada classe deve ser responsável por apenas <strong>uma
-        coisa</strong>. Quando uma classe acumula responsabilidades, qualquer
-        mudança em uma delas pode quebrar as outras.
+        O SRP diz que cada classe deve ser responsável por apenas{" "}
+        <strong>uma coisa</strong>. Quando uma classe acumula responsabilidades,
+        qualquer mudança em uma delas pode quebrar as outras.
       </p>
 
       <h3>Violação</h3>
@@ -169,11 +170,11 @@ class DiscountCalculator {
       </CodeBlock>
 
       <p>
-        Note que esse padrão é exatamente o{" "}
-        <strong>Strategy</strong> aplicado com OCP.{" "}
-        <a href="/artigos/design-patterns-strategy">
+        Note que esse padrão é exatamente o <strong>Strategy</strong> aplicado
+        com OCP.{" "}
+        <Link href="/artigos/design-patterns-strategy">
           Leia o artigo completo sobre o Strategy →
-        </a>
+        </Link>
       </p>
 
       {/* ─── LSP ─── */}
@@ -249,8 +250,8 @@ function makeBirdFly(bird: FlyingBird) {
       <p>
         Interfaces grandes demais (chamadas de <em>fat interfaces</em>) obrigam
         quem as implementa a fornecer métodos que não fazem sentido para aquela
-        classe. O ISP pede que as interfaces sejam <strong>específicas e
-        coesas</strong>.
+        classe. O ISP pede que as interfaces sejam{" "}
+        <strong>específicas e coesas</strong>.
       </p>
 
       <h3>Violação</h3>
@@ -308,11 +309,11 @@ class Robot implements Workable {
         </p>
       </blockquote>
       <p>
-        Quando o código de negócio cria diretamente instâncias de
-        implementações concretas (banco de dados, serviços externos), ele se
-        torna <strong>rígido e difícil de testar</strong>. O DIP inverte essa
-        relação: o módulo de alto nível define o contrato (interface), e a
-        implementação concreta é injetada de fora.
+        Quando o código de negócio cria diretamente instâncias de implementações
+        concretas (banco de dados, serviços externos), ele se torna{" "}
+        <strong>rígido e difícil de testar</strong>. O DIP inverte essa relação:
+        o módulo de alto nível define o contrato (interface), e a implementação
+        concreta é injetada de fora.
       </p>
 
       <h3>Violação</h3>
@@ -366,19 +367,16 @@ const testService = new OrderService(new InMemoryDatabase());`}
       </CodeBlock>
 
       <p>
-        Esse é exatamente o fundamento do padrão{" "}
-        <strong>Adapter</strong>: criar um contrato entre o domínio e a
-        dependência externa.{" "}
-        <a href="/artigos/design-patterns-adapter">
+        Esse é exatamente o fundamento do padrão <strong>Adapter</strong>: criar
+        um contrato entre o domínio e a dependência externa.{" "}
+        <Link href="/artigos/design-patterns-adapter">
           Leia o artigo completo sobre o Adapter →
-        </a>
+        </Link>
       </p>
 
       {/* ─── Resumo ─── */}
       <h2>Resumo rápido</h2>
-      <p>
-        Os cinco princípios se complementam e se reforçam mutuamente:
-      </p>
+      <p>Os cinco princípios se complementam e se reforçam mutuamente:</p>
       <ul>
         <li>
           <strong>SRP</strong> — cada classe tem uma razão de existir

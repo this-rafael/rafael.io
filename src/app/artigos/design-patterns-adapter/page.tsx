@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import StaticPostLayout from "@/components/posts/StaticPostLayout";
 import type { StaticPostMeta } from "@/components/posts/StaticPostLayout";
 import PostImage from "@/components/posts/PostImage";
@@ -316,16 +317,19 @@ class MySqlAdapter implements CreateDatabaseCustomerProtocol {
         <p>
           O Adapter isola <em>dependências externas</em> por trás de uma
           interface própria. O{" "}
-          <a href="/artigos/design-patterns-strategy">Strategy</a> encapsula{" "}
-          <em>variações de comportamento</em> por trás de uma interface comum.
-          Juntos, eles formam a base de uma arquitetura flexível e testável.
+          <Link href="/artigos/design-patterns-strategy">Strategy</Link>{" "}
+          encapsula <em>variações de comportamento</em> por trás de uma
+          interface comum. Juntos, eles formam a base de uma arquitetura
+          flexível e testável.
         </p>
       </blockquote>
       <p>
         Se você ainda não leu, confira também os artigos sobre{" "}
-        <a href="/artigos/clean-architecture-na-pratica">Clean Architecture</a>{" "}
-        e <a href="/artigos/principios-solid">SOLID</a> — os três conceitos se
-        complementam perfeitamente.
+        <Link href="/artigos/clean-architecture-na-pratica">
+          Clean Architecture
+        </Link>{" "}
+        e <Link href="/artigos/principios-solid">SOLID</Link> — os três
+        conceitos se complementam perfeitamente.
       </p>
     </StaticPostLayout>
   );
