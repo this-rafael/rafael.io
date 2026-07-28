@@ -7,16 +7,23 @@ import ProfessionalSummary from "../components/ProfessionalSummary";
 import PersonalSummary from "../components/PersonalSummary";
 import FooterSection from "../components/FooterSection";
 import { spreadArticles } from "../lib/spreadArticles";
+import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Rafael Pereira — Engenheiro de Software Senior",
+  title: {
+    absolute: "Rafael Pereira — Engenheiro de Software Senior",
+  },
   description:
     "Portfólio de Rafael Pereira. 7+ anos em arquitetura de software, Node.js, NestJS, Golang e AWS. Modernização de legados, performance e sistemas escaláveis.",
+  alternates: {
+    canonical: siteUrl("/"),
+  },
   openGraph: {
     title: "Rafael Pereira — Engenheiro de Software Senior",
     description:
       "Portfólio de Rafael Pereira. 7+ anos em arquitetura, Node.js, NestJS, Golang e AWS.",
     type: "website",
+    url: siteUrl("/"),
   },
 };
 

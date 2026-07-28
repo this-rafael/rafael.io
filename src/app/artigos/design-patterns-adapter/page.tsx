@@ -5,6 +5,7 @@ import type { StaticPostMeta } from "@/components/posts/StaticPostLayout";
 import PostImage from "@/components/posts/PostImage";
 import MermaidDiagram from "@/components/posts/MermaidDiagram";
 import CodeBlock from "@/components/posts/CodeBlock";
+import { siteUrl } from "@/lib/site";
 
 const meta: StaticPostMeta = {
   id: 6,
@@ -19,16 +20,19 @@ const meta: StaticPostMeta = {
 };
 
 export const metadata: Metadata = {
-  title: `${meta.title} — Rafael Pereira`,
+  title: meta.title,
   description: meta.description,
+  alternates: {
+    canonical: siteUrl(`/artigos/${meta.slug}`),
+  },
   openGraph: {
-    title: `${meta.title} — Rafael Pereira`,
+    title: meta.title,
     description: meta.description,
     type: "article",
-    url: `https://rafael.io/artigos/${meta.slug}`,
+    url: siteUrl(`/artigos/${meta.slug}`),
     images: [
       {
-        url: `https://rafael.io${meta.image}`,
+        url: siteUrl(meta.image),
         width: 1200,
         height: 630,
         alt: meta.title,
@@ -37,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${meta.title} — Rafael Pereira`,
+    title: meta.title,
     description: meta.description,
-    images: [`https://rafael.io${meta.image}`],
+    images: [siteUrl(meta.image)],
   },
 };
 

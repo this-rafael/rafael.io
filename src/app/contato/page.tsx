@@ -1,5 +1,22 @@
 import FooterSection from "@/components/FooterSection";
 import { Github, Linkedin, Mail, MessageSquare } from "lucide-react";
+import type { Metadata } from "next";
+import { siteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Contato",
+  description: "Entre em contato com Rafael Pereira para oportunidades, parcerias e discussões técnicas.",
+  alternates: {
+    canonical: siteUrl("/contato"),
+  },
+  openGraph: {
+    title: "Contato | Rafael Pereira",
+    description:
+      "Entre em contato com Rafael Pereira para oportunidades, parcerias e discussões técnicas.",
+    url: siteUrl("/contato"),
+    type: "website",
+  },
+};
 
 export default function Contact() {
   return (

@@ -5,10 +5,20 @@ import ProjectCard from "@/components/ProjectCard";
 import FooterSection from "@/components/FooterSection";
 
 import projects from "../../data/projects.json";
+import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Projetos | Rafael Pereira",
+  title: "Projetos",
   description: "Conheça os projetos desenvolvidos por Rafael Pereira",
+  alternates: {
+    canonical: siteUrl("/projetos"),
+  },
+  openGraph: {
+    title: "Projetos | Rafael Pereira",
+    description: "Conheça os projetos desenvolvidos por Rafael Pereira",
+    url: siteUrl("/projetos"),
+    type: "website",
+  },
 };
 
 export default function Projects() {

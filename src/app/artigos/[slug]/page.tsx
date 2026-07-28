@@ -5,6 +5,7 @@ import PostHeader from "@/components/posts/PostHeader";
 import PostBody from "@/components/posts/PostBody";
 import PostNavigation from "@/components/posts/PostNavigation";
 import FooterSection from "@/components/FooterSection";
+import { siteUrl } from "@/lib/site";
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
@@ -26,18 +27,21 @@ export async function generateMetadata({
     return { title: "Artigo não encontrado" };
   }
 
-  const title = `${post.title} — Rafael Pereira`;
+  const title = post.title;
   const description = post.description;
-  const imageUrl = `https://rafael.io${post.image}`;
+  const imageUrl = siteUrl(post.image);
 
   return {
     title,
     description,
+    alternates: {
+      canonical: siteUrl(`/artigos/${post.slug}`),
+    },
     openGraph: {
       title,
       description,
       type: "article",
-      url: `https://rafael.io/artigos/${post.slug}`,
+      url: siteUrl(`/artigos/${post.slug}`),
       images: [
         {
           url: imageUrl,
