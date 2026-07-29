@@ -1,12 +1,16 @@
 import "../globals.css";
 
 import { Inter, Syne } from "next/font/google";
+import type { Metadata } from "next";
 import FloatingNavbar from "@/components/FloatingNavbar";
 import CosmicBackground from "@/components/CosmicBackground";
 import { SITE_URL } from "@/lib/site";
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: SITE_URL,
+  verification: {
+    google: "google9660bfe224132967",
+  },
   title: {
     default: "Rafael Pereira — Engenheiro de Software Senior",
     template: "%s | Rafael Pereira",

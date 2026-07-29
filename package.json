@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "dev": "next dev",
-    "build": "pnpm run clean && next build",
+    "build": "pnpm run clean && next build && node scripts/copy-public-to-dist.mjs",
     "start": "next start",
     "lint": "next lint",
     "extract:images": "node scripts/extract-post-images.mjs"
